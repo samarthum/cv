@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samarth Mamadapur - Data Scientist</title>
+    <style>
+        /* Enhanced Apple-inspired design */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.5;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            /* Custom 800px width as requested */
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 40px auto;
+        }
+
+        @media (max-width: 1240px) {
+            .container {
+                margin: 20px;
+                width: calc(100% - 40px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                width: 100%;
+                border-radius: 0;
+            }
+        }
+
+        header {
+            background: linear-gradient(135deg, #ffffff 0%, #f5f5f7 100%);
+            padding: 40px 40px 30px;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .photo-placeholder {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #5E7CE2 0%, #0066CC 100%);
+            border-radius: 50%;
+            margin-bottom: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+            color: #1d1d1f;
+            line-height: 1.1;
+        }
+
+        .role {
+            font-size: 1.4rem;
+            color: #0066CC;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: #494949;
+        }
+
+        .contact a {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .section-divider {
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.05);
+            margin: 0 60px;
+        }
+
+        main {
+            padding: 40px;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin: 0 0 30px 0;
+            color: #1d1d1f;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: #0066CC;
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #1d1d1f;
+        }
+
+        p,
+        li {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            color: #494949;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #0066CC;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #004499;
+        }
+
+        .section {
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .about-container {
+            display: flex;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .about-me {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: #494949;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .skills-column {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .skills-list {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-item {
+            background-color: #f5f5f7;
+            padding: 5px 12px;
+            border-radius: 16px;
+            font-size: 0.85rem;
+            color: #1d1d1f;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+        }
+
+        .skill-item:hover {
+            background-color: #e8e8ed;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-item {
+            margin-bottom: 24px;
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .experience-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .job-company {
+            font-weight: 600;
+            color: #0066CC;
+            font-size: 1.3rem;
+            margin-bottom: 4px;
+        }
+
+        .job-title {
+            font-weight: 500;
+            color: #1d1d1f;
+            font-size: 1rem;
+        }
+
+        .job-date {
+            text-align: right;
+            font-size: 0.9rem;
+            color: #86868b;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .experience-content {
+            padding: 16px 24px 24px;
+        }
+
+        .job-description {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .job-description li {
+            position: relative;
+            padding-left: 16px;
+            margin-bottom: 12px;
+            color: #494949;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .job-description li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #0066CC;
+        }
+
+        .project {
+            margin-top: 16px;
+            margin-bottom: 16px;
+            background-color: #f8f8fa;
+            border-radius: 8px;
+            padding: 16px 16px 8px;
+            border-left: 3px solid #0066CC;
+        }
+
+        .project h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1d1d1f;
+        }
+
+        .project-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .project-list li {
+            position: relative;
+            padding-left: 16px;
+            margin-bottom: 12px;
+            color: #494949;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .project-list li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            color: #0066CC;
+        }
+
+        .education {
+            padding: 20px 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        @media (max-width: 768px) {
+
+            header,
+            main {
+                padding: 30px;
+            }
+
+            .section-divider {
+                margin: 0 30px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .role {
+                font-size: 1.2rem;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+            }
+
+            .skills-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Samarth Mamadapur</h1>
+                <div class="role">Data Scientist</div>
+                <div class="contact">
+                    <a href="mailto:um.samarth@gmail.com">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        um.samarth@gmail.com
+                    </a>
+                    <a href="tel:+4917686659027">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                        +49 17686659027
+                    </a>
+                    <a href="https://www.linkedin.com/in/samarth-mamadapur-05b84922a">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Berlin, Germany
+                    </span>
+                </div>
+                <div class="about-me">
+                    Data Scientist at Bolt, one of the fastest-growing mobility companies in Europe, with 5+ years of
+                    experience building and deploying ML/AI solutions at scale. Previously worked on data science
+                    problems for some of the biggest pharmaceutical companies in the world at ZS. Skilled at taking
+                    ambiguous business problems and deriving specific, data-driven solutions.
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="section">
+                <h2>About Me</h2>
+                <div class="about-container">
+                    <div class="about-text">
+                        <p class="about-me">
+                            Passionate about productionizing AI systems, from computer vision to LLMs. Recently built
+                            and launched CoverArtist.ai, a production LLM application that chains language and diffusion
+                            models to generate album artwork. Enjoy communicating complex results to both technical and
+                            non-technical audiences while driving product and business impact.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Experience</h2>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-company">Bolt</div>
+                            <div class="job-title">Data Scientist</div>
+                        </div>
+                        <div class="job-date">
+                            <span>June 2022 – Present</span>
+                            <span>Berlin</span>
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <ul class="job-description">
+                            <li>One of the earliest Data Science hires for the Micromobility vertical at a fast-growing
+                                European mobility startup.</li>
+                            <li>Scaled DS team and initiatives while serving millions of users across 100+ cities.</li>
+                        </ul>
+
+                        <div class="project">
+                            <h4>Pricing Optimization Strategy</h4>
+                            <ul class="project-list">
+                                <li>Architected a multi-model (including Bayesian hierarchical) forecasting system with
+                                    business-knowledge-based priors and constraints to optimize pricing across
+                                    pay-as-you-go rides and subscription passes.</li>
+                                <li>Achieved a significant MAPE reduction from 14.14% to 8.7% while improving causal
+                                    forecasting quality.</li>
+                                <li>Built robust forecasting models using a Bayesian framework, handling multiple
+                                    pricing scenarios across 100+ markets, guiding vertical-wide revenue decisions.</li>
+                                <li>Reduced average forecast MAPE by ~5% across all cities, leading to much
+                                    higher-quality forecasts and downstream pricing decisions based on the model.</li>
+                                <li>Translated an extremely ambiguous business challenge (pass vs pay-as-you-go) into a
+                                    structured, data-driven solution.</li>
+                                <li>Designed an experimental framework to measure price elasticities and
+                                    cross-elasticities between different product offerings.</li>
+                            </ul>
+                        </div>
+
+                        <div class="project">
+                            <h4>Smart Collect</h4>
+                            <ul class="project-list">
+                                <li>Led end-to-end development optimizing operational efficiency.</li>
+                                <li>Defined the north-star metric (GMV per Collection Task) through stakeholder
+                                    alignment.</li>
+                                <li>Designed rigorous A/B testing with user-centric guardrails.</li>
+                                <li>Drove a 2.7% improvement in the primary metric while maintaining user satisfaction
+                                    thresholds.</li>
+                                <li>Orchestrated the ML-based solution to a complex operations process end-to-end.</li>
+                            </ul>
+                        </div>
+
+                        <div class="project">
+                            <h4>Computer Vision Solutions</h4>
+                            <ul class="project-list">
+                                <li>Led ParkAssist project: defined parking quality standards, coordinated labeling
+                                    efforts, and fine-tuned vision models to achieve 85%+ accuracy.</li>
+                                <li>Processed millions of weekly parking validations across 100+ cities, improving
+                                    operational efficiency and user experience.</li>
+                                <li>Achieved best-in-class parking detection models (across all scooter competitors,
+                                    from public tender evaluations).</li>
+                                <li>Allowed operation in new markets and helped win tenders in existing markets,
+                                    indirectly resulting in millions of new rides.</li>
+                                <li>Developed tandem riding detection system using a first principles approach, crucial
+                                    for regulatory compliance and winning city tenders.</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-top: 24px;">
+                            <ul class="job-description">
+                                <li>Established a data-driven product development culture by operationalizing
+                                    vertical-wide standard metrics for experiments and holding weekly data insights
+                                    sessions with product and engineering teams to inform decision-making.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-company">CoverArtist.ai</div>
+                            <div class="job-title">Founder</div>
+                        </div>
+                        <div class="job-date">
+                            <span>December 2023 – Present</span>
+                            <span>Remote</span>
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <ul class="job-description">
+                            <li>Built and launched a production AI application that generates album artwork by chaining
+                                LLMs with diffusion models.</li>
+                            <li>Designed and implemented end-to-end system architecture, from prompt engineering to
+                                model deployment.</li>
+                            <li>Developed full-stack infrastructure using NextJS, handling user authentication and
+                                payment processing.</li>
+                            <li>Engineered robust prompt optimization and model chaining pipelines for consistent,
+                                high-quality outputs.</li>
+                            <li>Demonstrated ability to take an AI project from concept to monetized product, gaining
+                                hands-on experience with LLM development and deployment.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-company">Carnot Technologies</div>
+                            <div class="job-title">Data Scientist</div>
+                        </div>
+                        <div class="job-date">
+                            <span>October 2021 – April 2022</span>
+                            <span>Remote</span>
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <ul class="job-description">
+                            <li>Sole Data Scientist working on agri-tech solutions for a Mahindra-backed startup.</li>
+                            <li>Wrote production-level Python code to analyze large-scale, noisy IoT data from on-board
+                                devices (OBDs) on tractors (2Hz sampling rate) to detect fuel theft.</li>
+                            <li>Performed product usage analytics for an app with over 1 million registered users.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-company">Netcore Cloud</div>
+                            <div class="job-title">Data Scientist</div>
+                        </div>
+                        <div class="job-date">
+                            <span>March 2020 – June 2020</span>
+                            <span>Bangalore</span>
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <ul class="job-description">
+                            <li>Worked on customer segmentation using clustering techniques for e-commerce activity
+                                data, improving CTR of social media ads for a major Indian e-commerce website.</li>
+                            <li>Built a content recommendation system for a popular Indian (Malayalam) news outlet using
+                                pre-trained word embeddings (fastText).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-company">ZS</div>
+                            <div class="job-title">Data Science Associate</div>
+                        </div>
+                        <div class="job-date">
+                            <span>September 2018 – February 2020</span>
+                            <span>Pune, Bangalore</span>
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <ul class="job-description">
+                            <li>Identified distinct treatment pathways in the US immunology market to influence the
+                                standard of care for a leading pharmaceutical company:
+                                <ul class="project-list" style="margin-top: 10px;">
+                                    <li>Used PySpark SQL to preprocess claims data with billions of rows.</li>
+                                    <li>Deployed an LSTM Autoencoder to generate vector embeddings of patient journeys.
+                                    </li>
+                                    <li>Applied K-Means clustering on these embeddings to derive and profile distinct
+                                        treatment pathways.</li>
+                                </ul>
+                            </li>
+                            <li>Predicted progression of Kidney Cancer by building an ensemble model (XGBoost, Random
+                                Forest, LSTM, and CNN) using patient-level claims data.</li>
+                            <li>Developed an interactive Jupyter Notebook pipeline for patient-level event prediction
+                                problems, reducing preliminary analysis time by 70%:
+                                <ul class="project-list" style="margin-top: 10px;">
+                                    <li>Wrote a Python wrapper around parametric SQL code for efficient big-data
+                                        preprocessing on Redshift.</li>
+                                    <li>Created a Python library for automated hyperparameter tuning with Bayesian
+                                        Optimization.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Skills & Tools</h2>
+                <div class="skills-container">
+                    <div class="skills-column">
+                        <h3>Technical Skills</h3>
+                        <ul class="skills-list">
+                            <li class="skill-item">Machine Learning</li>
+                            <li class="skill-item">LLM Engineering</li>
+                            <li class="skill-item">Deep Learning</li>
+                            <li class="skill-item">Computer Vision</li>
+                            <li class="skill-item">Statistical Inference</li>
+                            <li class="skill-item">Experiment Design / A/B Testing</li>
+                            <li class="skill-item">Model Deployment</li>
+                            <li class="skill-item">Full Stack Development</li>
+                        </ul>
+                    </div>
+                    <div class="skills-column">
+                        <h3>Tools & Technologies</h3>
+                        <ul class="skills-list">
+                            <li class="skill-item">Python</li>
+                            <li class="skill-item">SQL</li>
+                            <li class="skill-item">NextJS</li>
+                            <li class="skill-item">AWS</li>
+                            <li class="skill-item">Docker</li>
+                            <li class="skill-item">OpenAI</li>
+                            <li class="skill-item">Airflow</li>
+                            <li class="skill-item">PySpark</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Education</h2>
+                <div class="education">
+                    <h3>B.E. in Electrical Engineering</h3>
+                    <p>M. S. Ramaiah Institute of Technology</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
