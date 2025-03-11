@@ -6,10 +6,10 @@ export default function CV() {
   const [expandEarlier, setExpandEarlier] = useState(false);
 
   return (
-    <div className="min-h-screen bg-background text-foreground py-12">
-      <div className="container mx-auto fade-in">
+    <div className="min-h-screen bg-background text-foreground py-6 md:py-12">
+      <div className="container mx-auto fade-in px-4 md:px-8">
         {/* Header */}
-        <header className="text-center max-w-3xl mx-auto">
+        <header className="text-center max-w-3xl mx-auto px-2 md:px-0">
           <h1 className="text-4xl font-semibold mb-2 tracking-tight">Samarth Mamadapur</h1>
           <p className="text-xl text-muted mb-8 font-light">Data Scientist</p>
 
@@ -58,7 +58,7 @@ export default function CV() {
         </header>
 
         {/* About Me */}
-        <section className="section max-w-2xl mx-auto m-12">
+        <section className="section max-w-2xl mx-auto m-12 px-2 md:px-0">
           <h2 className="section-title text-center mb-4">About Me</h2>
           <div className="text-base leading-relaxed">
             <p>

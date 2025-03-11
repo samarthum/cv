@@ -85,7 +85,7 @@ a:hover {
   width: 100%;
   max-width: 780px;
   margin: 0 auto;
-  padding: 0 20px;
+  /* padding: 0 20px; */
 }
 
 .section {
@@ -161,7 +161,8 @@ a:hover {
 }
 
 .job-content {
-  padding: 16px 24px 24px;
+  /* padding: 16px 24px 24px; */
+  @apply p-4 md:px-6 md:py-4;
 }
 
 .job-description {
